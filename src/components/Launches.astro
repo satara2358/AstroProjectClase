@@ -2,6 +2,7 @@
 // 1. 什么是函数
 
 import { type APISpaceXResponse } from "../types/api";
+import CardLaunch from "./CardLaunch.astro";
 
 const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
   method: "POST",
@@ -20,9 +21,19 @@ const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
 });
 
 const { docs: launches } = (await res.json()) as APISpaceXResponse;
-
 ---
 
 <div class="grid gap-8 sm-.grid-cols-2 lg:grid-cols-3">
-  {launches.map((launch) => <h2>Launch # {launch.id}</h2>)}
+  {
+    launches.map(
+      ({ id, links, details, flight_number: flightNumber, success }) => (
+      <CardLaunch
+        id={id}
+        img={links.patch.small}
+        details={details}
+        flightNumber={flightNumber}
+        success={success}
+      />
+    ))
+  }
 </div>
