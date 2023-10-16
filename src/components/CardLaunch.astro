@@ -1,0 +1,27 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  img: string;
+  success: boolean;
+  flightNumber: number;
+  datails: string;
+}
+
+const { success, flightNumber, img, id, datails } = Astro.props
+const successText = success ? 'Success' : 'Failure'
+---
+
+<a
+  href={`/launch/${id}`}
+  class="rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-105 hover:bg-gray-700 hover:border-gray-500 trasition flex flex-col"
+>
+  <picture class="flex justify-center p-4">
+    <img class="mb-5 rounded-lg" src={img} alt={`Patch for launch ${id}`}/>
+  </picture>
+
+  <header class="p-4 flex-grow">
+
+  </header>
+
+</a>

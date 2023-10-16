@@ -1,5 +1,5 @@
 ---
-
+import HeaderButton from "./HeaderButton.astro";
 
 ---
 
@@ -15,8 +15,61 @@
   </div>
 
   <nav class="flex flex-col items-center justify-between w-full text-center">
-    <a class="text-white" href="/">Ultimos lanzamientos de Space X</a>
-    <a class="text-white" href="/about">Sobre el proyecto Space X</a>
-    <a class="text-white" href="/oldest">Todos los lanzamientos de Space X Anteriores</a>
+    <HeaderButton class="text-white" href="/">
+      <svg 
+        slot="before"
+        xmlns="http://www.w3.org/2000/svg" 
+        class="icon icon-tabler icon-tabler-rocket" 
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        stroke-width="2" 
+        stroke="currentColor" 
+        fill="none" 
+        stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"></path>
+        <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
+        <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+     </svg>
+      Ultimos lanzamientos de Space X
+    </HeaderButton>
+    <HeaderButton class="text-white" href="/about">
+      <svg 
+        slot="after"
+        xmlns="http://www.w3.org/2000/svg" 
+        class="icon icon-tabler icon-tabler-brand-google" 
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        stroke-width="2" 
+        stroke="currentColor" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+     </svg>
+      Sobre el proyecto Space X
+    </HeaderButton>
+    <HeaderButton class="text-white" href="/oldest">
+      <svg 
+        slot="before"
+        xmlns="http://www.w3.org/2000/svg" 
+        class="icon icon-tabler icon-tabler-rocket" 
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        stroke-width="2" 
+        stroke="currentColor" 
+        fill="none" 
+        stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"></path>
+        <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
+        <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+     </svg>
+      Todos los lanzamientos de Space X Anteriores
+    </HeaderButton>
   </nav>
 </header>

@@ -21,7 +21,8 @@ const { title } = Astro.props;
 	<body class="bg-gray-900 min-h-screen pb-32">
 		<Header />
 		<main class="max-w-5xl px-4 m-auto">
-			<slot />  //  Children are rendered here 
+			<!-- Children are rendered here  -->
+			<slot />  
 		</main>
 	</body>
 </html>
@@ -41,6 +42,7 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+		/* color scheme usa el modo oscuro y por defecto lo demas se adapta al modo oscuro */
 		color-scheme: dark light;
 	}
 	code {
